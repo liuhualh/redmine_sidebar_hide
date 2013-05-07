@@ -24,11 +24,13 @@ function hideSideBar()
     if( document.getElementById("sidebar").style.display != 'none' ) {
         document.getElementById("sidebar").style.display = 'none';
         document.getElementById('content').style.width="auto";
+        document.getElementById('content').style.marginRight="0px";
         document.getElementById('hideSidebarButton').className = 'hide';
         setCookie("sidebarCookie", "hide", 100);
     } else {
         document.getElementById("sidebar").style.display = 'block';
-        document.getElementById('content').style.width="75%";
+   //     document.getElementById('content').style.width="75%";
+        document.getElementById('content').style.marginRight="300px";
         document.getElementById('hideSidebarButton').className = 'show';
         setCookie("sidebarCookie", "show", 100);
     }
