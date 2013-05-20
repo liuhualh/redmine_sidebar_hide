@@ -19,6 +19,10 @@ function getCookie(c_name) {
     }
 }
 
+var contentWidth = document.getElementById('content').style.width;
+var sidebarWidth = document.getElementById('sidebar').style.width;
+var contentMarginRight = document.getElementById('content').style.marginRight;
+
 function hideSideBar()
 {
     if( document.getElementById("sidebar").style.display != 'none' ) {
@@ -29,8 +33,9 @@ function hideSideBar()
         setCookie("sidebarCookie", "hide", 100);
     } else {
         document.getElementById("sidebar").style.display = 'block';
-   //     document.getElementById('content').style.width="75%";
-        document.getElementById('content').style.marginRight="300px";
+        document.getElementById('sidebar').style.width= sidebarWidth;
+        document.getElementById('content').style.width= contentWidth;
+        document.getElementById('content').style.marginRight= contentMarginRight;
         document.getElementById('hideSidebarButton').className = 'show';
         setCookie("sidebarCookie", "show", 100);
     }
