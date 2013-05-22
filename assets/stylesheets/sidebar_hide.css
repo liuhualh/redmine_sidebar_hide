@@ -2,6 +2,7 @@
   position: fixed;
   width:7px;
   height:23px;
+  z-index:11;
 }
 
 #hideSidebarButton:hover {
@@ -18,15 +19,14 @@
 
 #sidebarHandler {
   position: absolute;
-  float: right;
+  float: left;
   top:50px;
-  right:0px;
+  left:-25px;
   margin-top:50px;
   margin-right: 7px;
   z-index: 11;
 }
 
 #content {
-  position: relative;
   padding: 6px 20px 10px 10px;
 }

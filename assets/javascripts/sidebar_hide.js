@@ -21,14 +21,19 @@ function getCookie(c_name) {
 
 function hideSideBar()
 {
-    if( document.getElementById("sidebar").style.display != 'none' ) {
-        document.getElementById("sidebar").style.display = 'none';
-        document.getElementById('content').style.width="auto";
+    if( document.getElementById("sidebar").style.width != '1px' ) {
+        document.getElementById("sidebar").style.display = 'block';
+	document.getElementById("sidebar").style.width = '1px';
+	document.getElementById("sidebar").style.overflow = 'hidden';
+        document.getElementById('content').style.width = "auto";
+	document.getElementById('sidebarHandler').style.left = "-7px";
         document.getElementById('hideSidebarButton').className = 'hide';
         setCookie("sidebarCookie", "hide", 100);
     } else {
         document.getElementById("sidebar").style.display = 'block';
-        document.getElementById('content').style.width="75%";
+	document.getElementById("sidebar").style.width = '22%';
+        document.getElementById('content').style.width = "75%";
+	document.getElementById('sidebarHandler').style.left = "-25px";
         document.getElementById('hideSidebarButton').className = 'show';
         setCookie("sidebarCookie", "show", 100);
     }
