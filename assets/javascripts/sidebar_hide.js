@@ -36,4 +36,8 @@ function hideSideBar()
 
 $(function() {
     $('#context-menu').appendTo('#main');
+ 
+    // Hack
+    $('<div id="sidebar-handler-wrapper">').insertBefore('#content');
+    $('#sidebar-handler-wrapper').append($('#sidebarHandler'));
 });

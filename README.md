@@ -19,7 +19,7 @@ Tested with...
 ====================
 
 Redmine:
- * =3.3.0
+ * >=4.2.0
 
 Themes:
  * Default themes
