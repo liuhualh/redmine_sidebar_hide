@@ -1,5 +1,9 @@
 # encoding: utf-8
-require_dependency 'sidebar_hook_listener'
+require 'redmine'
+
+Rails.configuration.to_prepare do
+  require_dependency 'sidebar_hook_listener'
+end
 
 Redmine::Plugin.register :sidebar_hide do
   name 'Sidebar Hide Plugin'
